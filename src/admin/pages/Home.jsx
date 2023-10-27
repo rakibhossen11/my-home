@@ -41,7 +41,7 @@ const AdminHome = () => {
                                 <th className='px-6 py-3 bg-gray-50'>Octobor 23</th>
                                 {/* <th className='px-6 py-3 bg-gray-50'></th> */}
                                 <th className='px-6 py-3 bg-gray-50'>{resident.unpaid}</th>
-                                <th className='px-6 py-3 bg-gray-50'> <Link to='/updateform'><button>Details</button></Link> </th>
+                                <th className='px-6 py-3 bg-gray-50'> <Link to='/clientdetails'><button>Details</button></Link> </th>
                             </tr>
                         ))
                     }

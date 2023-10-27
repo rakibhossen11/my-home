@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div>
             {/* Slider */}
-            {/* <Slider /> */}
+            <Slider />
             {/* Category */}
             <section className='grid grid-cols-2 gap-4 p-4 items-center'>
                 <div>
@@ -23,7 +23,7 @@ const Home = () => {
                 </div>
             </section>
             {/* Section 3 */}
-            <section className='bg-[#6495ED] py-10 my-10'>
+            <section className='bg-[#ff1d58] py-10 my-10'>
                 <h1 className='font-display text-3xl text-white text-center'>WHY CHOOSE MY HOME ?</h1>
             </section>
         </div>

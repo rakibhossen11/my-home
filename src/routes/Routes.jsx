@@ -3,7 +3,7 @@ import Main from "../layout/Main";
 import Home from "../pages/Home";
 import AddClient from "../pages/AddClient";
 import AdminHome from "../admin/pages/Home";
-import UpdateForm from "../admin/pages/UpdateForm";
+import ClientDetails from "../admin/pages/ClientDetails";
 
 const routes = createBrowserRouter([
     {
@@ -23,8 +23,8 @@ const routes = createBrowserRouter([
                 element: <AdminHome></AdminHome>
             },
             {
-                path: 'updateform',
-                element: <UpdateForm></UpdateForm>
+                path: 'clientdetails',
+                element: <ClientDetails></ClientDetails>
             }
         ]
     }
