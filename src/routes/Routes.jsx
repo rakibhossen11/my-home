@@ -5,6 +5,7 @@ import AddClient from "../pages/AddClient";
 import AdminHome from "../admin/pages/Home";
 import ClientDetails from "../admin/pages/ClientDetails";
 import RentCollection from "../admin/pages/RentCollection";
+import Cost from "../admin/pages/Cost";
 
 const routes = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const routes = createBrowserRouter([
             {
                 path: 'rentcollection',
                 element: <RentCollection></RentCollection>
+            },
+            {
+                path: 'cost',
+                element: <Cost></Cost>
             },
         ]
     }
