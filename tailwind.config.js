@@ -9,6 +9,7 @@ export default {
     fontFamily:{
       display: ['Geologica', 'sans-serif'],
       regular: ['Roboto', 'sans-serif'],
+      bangla: ['Bangla', 'sans-serif'],
     }
   },
   plugins: [],

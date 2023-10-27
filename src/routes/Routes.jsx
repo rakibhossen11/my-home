@@ -1,6 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Home from "../pages/Home";
+import AddClient from "../pages/AddClient";
+import AdminHome from "../admin/pages/Home";
+import UpdateForm from "../admin/pages/UpdateForm";
 
 const routes = createBrowserRouter([
     {
@@ -10,6 +13,18 @@ const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>
+            },
+            {
+                path: 'addclient',
+                element: <AddClient></AddClient>
+            },
+            {
+                path: 'adminhome',
+                element: <AdminHome></AdminHome>
+            },
+            {
+                path: 'updateform',
+                element: <UpdateForm></UpdateForm>
             }
         ]
     }
