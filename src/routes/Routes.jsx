@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import AddClient from "../pages/AddClient";
 import AdminHome from "../admin/pages/Home";
 import ClientDetails from "../admin/pages/ClientDetails";
+import RentCollection from "../admin/pages/RentCollection";
 
 const routes = createBrowserRouter([
     {
@@ -25,7 +26,11 @@ const routes = createBrowserRouter([
             {
                 path: 'clientdetails',
                 element: <ClientDetails></ClientDetails>
-            }
+            },
+            {
+                path: 'rentcollection',
+                element: <RentCollection></RentCollection>
+            },
         ]
     }
 ])
