@@ -13,6 +13,7 @@ const Navbar = () => {
                 <h1>See All</h1>
                 <h1 className='font-bangla'><Link to='rentcollection'>Rent Collection</Link></h1>
                 <h1 className='font-bangla'><Link to='cost'>Cost</Link></h1>
+                <h1 className='font-bangla'><Link to='dashboard'>Dashboard</Link></h1>
             </div>
         </div>
     );

@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Cost = () => {
     return (
         <div className='px-12 rounded-lg'>
+            <Link to='/costadd'><button className='bg-[#0049B7] px-6 py-4 font-display text-white rounded-lg '>Add Cost</button></Link>
             <table className='w-full rounded-lg mt-10'>
                 <thead className='text-gray-700 font-display uppercase text-lg text-left'>
                     <tr>
