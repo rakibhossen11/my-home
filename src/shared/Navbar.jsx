@@ -1,16 +1,38 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    return (
-        <div className='bg-[#f75990] rounded-b-3xl mt-10 flex items-center justify-between px-10 py-10'>
-            <h1 className='font-display text-3xl text-[#FBFCFC]'><Link to='/'>MY HOME</Link></h1>
-            <div className='flex gap-6 justify-center items-center text-[#FBFCFC] text-2xl'>
-                <h1><Link to='/'>Home</Link></h1>
-                <h1><Link to='dashboard'>Dashboard</Link></h1>
-            </div>
-        </div>
-    );
+  return (
+    <div>
+      <header className="bg-white">
+        <nav className="flex justify-between items-center w-[92%]  mx-auto">
+          <div>
+            <img
+              className="w-16 cursor-pointer"
+              src="https://cdn-icons-png.flaticon.com/512/5968/5968204.png"
+              alt=""
+            />
+          </div>
+          <div className="duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+            <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+              <li className="hover:text-gray-500">Home</li>
+              <li className="hover:text-gray-500">About</li>
+              <li className="hover:text-gray-500">Pricing</li>
+            </ul>
+          </div>
+          <div class="flex items-center gap-6">
+            <button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">
+              Sign in
+            </button>
+            <ion-icon
+              name="menu"
+              class="text-3xl cursor-pointer md:hidden"
+            ></ion-icon>
+          </div>
+        </nav>
+      </header>
+    </div>
+  );
 };
 
 export default Navbar;

@@ -15,6 +15,7 @@ export default {
       display: ['Geologica', 'sans-serif'],
       regular: ['Roboto', 'sans-serif'],
       bangla: ['Bangla', 'sans-serif'],
+      popiens: ['Poppins', 'sans-serif'],
     }
   },
   plugins: [],
