@@ -27,10 +27,13 @@ const Drawer = () => {
               {
                 menus.map((menu,index) => (
                   <li key={index} 
-                  className={`flex rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4 ${menu.gap ? "mt-9" : "mt-2"} ${index === 0 && 'bg-light-white'}`}
+                  
                   >
+                    <Link to={`${menu.to}`} className={`flex rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4 ${menu.gap ? "mt-9" : "mt-2"} ${index === 0 && 'bg-light-white'}`}>
                     <img src={`../../src/assets/${menu.src}.png`} alt="" />
                     <span className={`${!open && 'hidden'} origin-left duration-200`}>{menu.title}</span>
+                    </Link>
+                    
                   </li>
                 ))
               }

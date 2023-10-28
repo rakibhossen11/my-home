@@ -21,14 +21,14 @@ const AdminHome = () => {
     return (
         <div className='px-12 rounded-lg'>
             <table className='w-full rounded-lg'>
-                <thead className='text-gray-700 font-display uppercase text-lg text-left'>
-                    <tr>
-                        <th className='px-6 py-3 bg-gray-200'>Name</th>
-                        <th className='px-6 py-3 bg-gray-200'>Rent Rate</th>
-                        <th className='px-6 py-3 bg-gray-200'>Last Month</th>
-                        {/* <th className='px-6 py-3 bg-gray-200'></th> */}
-                        <th className='px-6 py-3 bg-gray-200'>Unpaid</th>
-                        <th className='px-6 py-3 bg-gray-200'> </th>
+                <thead className='text-gray-700 font-display uppercase text-lg text-left rounded-lg'>
+                    <tr className='bg-dark-purple text-white origin-left font-display text-xl '>
+                        <th className='px-6 py-3'>Name</th>
+                        <th className='px-6 py-3'>Rent Rate</th>
+                        <th className='px-6 py-3'>Last Month</th>
+                        {/* <th className='px-6 py-3'></th> */}
+                        <th className='px-6 py-3'>Unpaid</th>
+                        <th className='px-6 py-3'> </th>
                         
                     </tr>
                 </thead>
