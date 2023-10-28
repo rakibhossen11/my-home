@@ -7,13 +7,7 @@ const Navbar = () => {
             <h1 className='font-display text-3xl text-[#FBFCFC]'><Link to='/'>MY HOME</Link></h1>
             <div className='flex gap-6 justify-center items-center text-[#FBFCFC] text-2xl'>
                 <h1><Link to='/'>Home</Link></h1>
-                <h1><Link to='/adminhome'>Admin Home</Link></h1>
-                <h1>About</h1>
-                <h1><Link to="/addclient">Customer Add</Link></h1>
-                <h1>See All</h1>
-                <h1 className='font-bangla'><Link to='rentcollection'>Rent Collection</Link></h1>
-                <h1 className='font-bangla'><Link to='cost'>Cost</Link></h1>
-                <h1 className='font-bangla'><Link to='dashboard'>Dashboard</Link></h1>
+                <h1><Link to='dashboard'>Dashboard</Link></h1>
             </div>
         </div>
     );

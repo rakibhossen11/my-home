@@ -20,7 +20,7 @@ const AdminHome = () => {
 
     return (
         <div className='px-12 rounded-lg'>
-            <table className='w-full rounded-lg mt-10'>
+            <table className='w-full rounded-lg'>
                 <thead className='text-gray-700 font-display uppercase text-lg text-left'>
                     <tr>
                         <th className='px-6 py-3 bg-gray-200'>Name</th>

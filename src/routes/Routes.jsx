@@ -19,21 +19,8 @@ const routes = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: 'addclient',
-                element: <AddClient></AddClient>
-            },
-            
-            {
                 path: 'clientdetails',
                 element: <ClientDetails></ClientDetails>
-            },
-            {
-                path: 'rentcollection',
-                element: <RentCollection></RentCollection>
-            },
-            {
-                path: 'cost',
-                element: <Cost></Cost>
             },
             {
                 path: 'costadd',
@@ -52,6 +39,14 @@ const routes = createBrowserRouter([
             {
                 path: 'adminhome',
                 element: <AdminHome></AdminHome>
+            },
+            {
+                path: 'cost',
+                element: <Cost></Cost>
+            },
+            {
+                path: 'rentcollection',
+                element: <RentCollection></RentCollection>
             },
         ]
     }
