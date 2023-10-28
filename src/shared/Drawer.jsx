@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Drawer = () => {
   const [open,setOpen] = useState(true);
   const menus = [
-    { title: "Dashboard", src: "Chart_fill" },
-    { title: "Inbox", src: "Chat" },
+    { title: "Dashboard", src: "Chart_fill", to: '/dashboard/adminhome' },
+    { title: "Inbox", src: "Chat", to: '/dashboard/rentcollection' },
     { title: "Accounts", src: "User", gap: true },
     { title: "Schedule ", src: "Calendar" },
     { title: "Search", src: "Search" },
@@ -35,9 +35,6 @@ const Drawer = () => {
                 ))
               }
           </ul>
-        </div>
-        <div className="h-screen flex-1 p-7">
-          <h1 className="text-2xl font-semibold">Home Page</h1>
         </div>
     </div>
   );

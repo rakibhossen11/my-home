@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div>
             {/* Slider */}
-            {/* <Slider /> */}
+            <Slider />
             {/* Category */}
             <section className='grid grid-cols-2 gap-4 p-4 items-center'>
                 <div>
