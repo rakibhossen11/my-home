@@ -5,12 +5,13 @@ import Drawer from '../shared/Drawer';
 const Dashboard = () => {
     return (
         <div className='flex max-w-7xl mx-auto py-10 bg-[#c2edda]'>
-            <div className='basis-1/4'>
-                <Drawer></Drawer>
+            <Drawer></Drawer>
+            {/* <div className='basis-1/4'>
+                
             </div>
             <div className='basis-3/4 '>
                 <Outlet></Outlet>
-            </div>
+            </div> */}
         </div>
     );
 };
