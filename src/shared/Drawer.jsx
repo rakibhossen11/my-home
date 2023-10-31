@@ -5,13 +5,13 @@ const Drawer = () => {
   const [open,setOpen] = useState(true);
   const menus = [
     { title: "Dashboard", src: "Chart_fill", to: '/dashboard/adminhome' },
-    { title: "Inbox", src: "Chat", to: '/dashboard/rentcollection' },
-    { title: "Accounts", src: "User", gap: true },
-    { title: "Schedule ", src: "Calendar" },
-    { title: "Search", src: "Search" },
-    { title: "Analytics", src: "Chart" },
-    { title: "Files ", src: "Folder", gap: true },
-    { title: "Setting", src: "Setting" },
+    { title: "Collection", src: "Chat", to: '/dashboard/rentcollection' },
+    // { title: "Accounts", src: "User", gap: true },
+    // { title: "Schedule ", src: "Calendar" },
+    // { title: "Search", src: "Search" },
+    // { title: "Analytics", src: "Chart" },
+    // { title: "Files ", src: "Folder", gap: true },
+    // { title: "Setting", src: "Setting" },
   ]
   return (
     <div className="flex">

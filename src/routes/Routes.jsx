@@ -8,6 +8,8 @@ import RentCollection from "../admin/pages/RentCollection";
 import Cost from "../admin/pages/Cost";
 import CostAdd from "../admin/pages/CostAdd";
 import Dashboard from "../layout/Dashboard";
+import UpdateForm from "../admin/pages/UpdateForm";
+import Rent from "../admin/pages/Rent";
 
 const routes = createBrowserRouter([
     {
@@ -47,6 +49,14 @@ const routes = createBrowserRouter([
             {
                 path: 'rentcollection',
                 element: <RentCollection></RentCollection>
+            },
+            {
+                path: 'updateForm',
+                element: <UpdateForm></UpdateForm>
+            },
+            {
+                path: 'rent',
+                element: <Rent></Rent>
             },
         ]
     }

@@ -4,7 +4,7 @@ import Drawer from '../shared/Drawer';
 
 const Dashboard = () => {
     return (
-        <div className='flex max-w-7xl mx-auto py-10 bg-[#c2edda]'>
+        <div className='flex pt-10 max-w-7xl mx-auto bg-[#c2edda]'>
             <Drawer></Drawer>
             <Outlet></Outlet>
         </div>

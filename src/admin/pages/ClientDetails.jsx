@@ -1,5 +1,6 @@
 import React from "react";
 import profile from "../../assets/home2.jpg";
+import { Link } from "react-router-dom";
 
 const ClientDetails = () => {
   return (
@@ -12,6 +13,7 @@ const ClientDetails = () => {
           <h1>Name: Aminul Islam</h1>
           <h1>Phone: 01966366745</h1>
           <h1>Parmanent Address: Jamalpur</h1>
+          <Link to='/dashboard/rent'><h2>Edit</h2></Link>
         </div>
       </div>
       {/* data table */}
