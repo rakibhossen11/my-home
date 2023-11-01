@@ -10,6 +10,7 @@ import CostAdd from "../admin/pages/CostAdd";
 import Dashboard from "../layout/Dashboard";
 import UpdateForm from "../admin/pages/UpdateForm";
 import Rent from "../admin/pages/Rent";
+import ClientAdd from "../admin/pages/ClientAdd";
 
 const routes = createBrowserRouter([
     {
@@ -57,6 +58,10 @@ const routes = createBrowserRouter([
             {
                 path: 'rent',
                 element: <Rent></Rent>
+            },
+            {
+                path: 'clientadd',
+                element: <AddClient></AddClient>
             },
         ]
     }
