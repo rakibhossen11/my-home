@@ -4,8 +4,19 @@ import { useForm } from 'react-hook-form';
 
 const CostAdd = () => {
     const {register,handleSubmit,reset} = useForm();
-    const onSubmit = (data) =>{
-        console.log(data)
+    const onSubmit = (costs) =>{
+        console.log(costs)
+        fetch("http://localhost:5000/costs",{
+            method: "POST",
+            headers: {
+                "content-type" : "application/json"
+            },
+            body: JSON.stringify(costs)
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data)
+        })
     }
     return (
         <form className='mx-auto max-w-5xl mt-10 bg-[#e8f9fd] p-10 rounded-lg font-display text-2xl' onSubmit={handleSubmit(onSubmit)}>
