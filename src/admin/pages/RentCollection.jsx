@@ -2,7 +2,7 @@ import React from "react";
 
 const RentCollection = () => {
   return (
-    <div className="px-12 rounded-lg">
+    <div className="px-12 rounded-lg w-full">
       <table className="w-full rounded-lg mt-10">
         <thead className="text-gray-700 font-display uppercase text-lg text-left">
           <tr>

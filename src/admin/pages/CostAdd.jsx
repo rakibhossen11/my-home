@@ -1,22 +1,24 @@
-import React from 'react';
-import { useFormAction } from 'react-router-dom';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+
+
 
 const CostAdd = () => {
     const {register,handleSubmit,reset} = useForm();
+
     const onSubmit = (costs) =>{
         console.log(costs)
-        fetch("http://localhost:5000/costs",{
-            method: "POST",
-            headers: {
-                "content-type" : "application/json"
-            },
-            body: JSON.stringify(costs)
-        })
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data)
-        })
+        // fetch("http://localhost:5000/costs",{
+        //     method: "POST",
+        //     headers: {
+        //         "content-type" : "application/json"
+        //     },
+        //     body: JSON.stringify(costs)
+        // })
+        // .then((res) => res.json())
+        // .then((data) => {
+        //     console.log(data)
+        // })
     }
     return (
         <form className='mx-auto max-w-5xl mt-10 bg-[#e8f9fd] p-10 rounded-lg font-display text-2xl' onSubmit={handleSubmit(onSubmit)}>
@@ -24,7 +26,7 @@ const CostAdd = () => {
                 <label>
                     <span>Date</span>
                 </label>
-                <input {...register('date')} className='input rounded-lg w-full h-10 p-2 mt-4 mb-2' placeholder='Date' />
+                <input type='date' {...register('date')} className='input rounded-lg w-full h-10 p-2 mt-4 mb-2' placeholder='Date' />
             </div>
             <div className='form-control w-full'>
                 <label>

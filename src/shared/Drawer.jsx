@@ -6,7 +6,7 @@ const Drawer = () => {
   const menus = [
     { title: "Dashboard", src: "Chart_fill", to: '/dashboard/adminhome' },
     { title: "Collection", src: "Chat", to: '/dashboard/rentcollection' },
-    // { title: "Accounts", src: "User", gap: true },
+    { title: "Accounts", src: "User", to: '/dashboard/cost', gap: true },
     // { title: "Schedule ", src: "Calendar" },
     // { title: "Search", src: "Search" },
     // { title: "Analytics", src: "Chart" },
