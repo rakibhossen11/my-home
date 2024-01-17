@@ -22,21 +22,17 @@ const routes = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: 'clientdetails',
-                element: <ClientDetails></ClientDetails>
-            },
-            {
-                path: 'costadd',
+                path: '/costadd',
                 element: <CostAdd></CostAdd>
             },
             {
-                path: 'dashboard',
+                path: '/dashboard',
                 element: <Dashboard></Dashboard>
             },
         ]
     },
     {
-        path: 'dashboard',
+        path: '/dashboard',
         element: <Dashboard></Dashboard>,
         children: [
             {
@@ -62,6 +58,11 @@ const routes = createBrowserRouter([
             {
                 path: 'clientadd',
                 element: <AddClient></AddClient>
+            },
+            {
+                path: 'clientdetails/:id',
+                element: <ClientDetails></ClientDetails>,
+                loader: ({params}) => fetch(`http://localhost:5000/clients/${params.id}`)
             },
         ]
     }

@@ -16,7 +16,7 @@ module.exports = withMT({
       },
     },
     fontFamily:{
-      display: ['Geologica', 'sans-serif'],
+      display: ['Signika', 'sans-serif'],
       regular: ['Roboto', 'sans-serif'],
       bangla: ['Bangla', 'sans-serif'],
       popiens: ['Poppins', 'sans-serif'],
