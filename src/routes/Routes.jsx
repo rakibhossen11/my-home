@@ -48,8 +48,9 @@ const routes = createBrowserRouter([
                 element: <RentCollection></RentCollection>
             },
             {
-                path: 'updateForm',
-                element: <UpdateForm></UpdateForm>
+                path: 'updateForm/:id',
+                element: <UpdateForm></UpdateForm>,
+                loader: ({params}) => fetch(`http://localhost:5000/clients/${params.id}`)
             },
             {
                 path: 'rent',

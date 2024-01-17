@@ -1,11 +1,46 @@
 import React from "react";
 import profile from "../../assets/home2.jpg";
 import { Link, useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const ClientDetails = () => {
   const client = useLoaderData();
-  const {_id, name} = client;
-  console.log(client._id);
+  const {_id, code, name} = client;
+  // console.log(client._id);
+
+  // delete a person
+  const handleDelete = (id) =>{
+    console.log(id)
+
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/clients/${_id}`,{
+          method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(data =>{
+          console.log(data)
+          if(data.deletedCount > 0){
+            Swal.fire(
+              'Deleted!',
+              'Your file has been deleted.',
+              'success'
+            )
+            // const remaning = coffees.filter(cof => cof._id !== _id);
+            // setCoffees(remaning);
+          }
+        })
+      }
+    })
+  };
 
   
   return (
@@ -18,7 +53,12 @@ const ClientDetails = () => {
           <h1>Name: {name}</h1>
           <h1>Phone: 01966366745</h1>
           <h1>Address: Jamalpur</h1>
-          <Link to='/dashboard/rent'><h2>Edit</h2></Link>
+          <h1>Id : {_id}</h1>
+          <h1>Code : {code}</h1>
+          <div className="flex gap-[50px]">
+          <Link to={`/dashboard/updateForm/${_id}`}><h2>Edit</h2></Link>
+          {/* <Link><h2 onClick={() => handleDelete(_id)}>Remove</h2></Link> */}
+          </div>
         </div>
       </div>
       {/* data table */}

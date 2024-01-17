@@ -42,7 +42,7 @@ const AdminHome = () => {
           <tbody className="text-[#000000] font-regular uppercase text-lg text-left ">
             {residents.map((resident) => (
               <tr className="border-b-2 border-[#000000]" key={resident._id}>
-                <th className="px-6 py-3 bg-gray-50">01</th>
+                <th className="px-6 py-3 bg-gray-50">{resident.code}</th>
                 <th className="px-6 py-3 bg-gray-50">{resident.name}</th>
                 <th className="px-6 py-3 bg-gray-50">{resident.rent}</th>
                 <th className="px-6 py-3 bg-gray-50"></th>
