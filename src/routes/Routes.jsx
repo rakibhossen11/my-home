@@ -22,10 +22,6 @@ const routes = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: '/costadd',
-                element: <CostAdd></CostAdd>
-            },
-            {
                 path: '/dashboard',
                 element: <Dashboard></Dashboard>
             },
@@ -44,6 +40,10 @@ const routes = createBrowserRouter([
                 element: <Cost></Cost>
             },
             {
+                path: 'costadd',
+                element: <CostAdd></CostAdd>
+            },
+            {
                 path: 'rentcollection',
                 element: <RentCollection></RentCollection>
             },
@@ -53,8 +53,9 @@ const routes = createBrowserRouter([
                 loader: ({params}) => fetch(`http://localhost:5000/clients/${params.id}`)
             },
             {
-                path: 'rent',
-                element: <Rent></Rent>
+                path: 'rent/:id',
+                element: <Rent></Rent>,
+                loader: ({params}) => fetch(`http://localhost:5000/clients/${params.id}`)
             },
             {
                 path: 'clientadd',

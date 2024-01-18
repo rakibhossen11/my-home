@@ -2,18 +2,24 @@ import { Input, Option, Select } from "@material-tailwind/react";
 import React from "react";
 import Calendar from "react-calendar";
 import { useForm } from "react-hook-form";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Rent = () => {
   const { register, handleSubmit, reset } = useForm();
+  const user = useLoaderData();
+  const {_id, name, rent, code, } = user;
+  console.log(user);
   const onSubmit = (data) => {
     console.log(data);
+    const inputArray = [];
+    inputArray.push(data);
+    console.log(inputArray);
   };
 
-  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',  'August', 'September', 'October', 'November',  'December'];
   return (
-    <div className="px-12">
+    <div className="w-full px-12">
       <form
-        className="mx-auto max-w-5xl mt-10 bg-[#e8f9fd] p-10 rounded-lg font-display text-2xl"
+        className="p-10 rounded-lg font-display text-2xl"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="form-control w-full">
@@ -24,16 +30,30 @@ const Rent = () => {
             {...register("name")}
             className="input rounded-lg w-full h-10 p-2 mt-4 mb-2"
             placeholder="Name"
+            value={name}
           />
         </div>
-        <div>
-          {
-            months.map((month) => (
-              <Select Option={month}>
-              <Option key={month} value={month}>{month}</Option>
-              </Select>
-            ))
-          }
+        <div className="form-control w-full">
+          <label>
+            <span>Code</span>
+          </label>
+          <input
+            {...register("code")}
+            className="input rounded-lg w-full h-10 p-2 mt-4 mb-2"
+            placeholder="Code"
+            value={code}
+          />
+        </div>
+        <div className="form-control w-full">
+          <label>
+            <span>Outstanding</span>
+          </label>
+          <input
+            {...register("outstanding")}
+            className="input rounded-lg w-full h-10 p-2 mt-4 mb-2"
+            placeholder="Outstanding"
+            value={code}
+          />
         </div>
         <div className="form-control w-full">
           <label>
@@ -43,6 +63,40 @@ const Rent = () => {
             {...register("month")}
             className="input rounded-lg w-full h-10 p-2 mt-4 mb-2"
             placeholder="Month Name"
+            type="month"
+          />
+        </div>
+        <div className="form-control w-full">
+          <label>
+            <span>Time</span>
+          </label>
+          <input
+            {...register("time")}
+            className="input rounded-lg w-full h-10 p-2 mt-4 mb-2"
+            placeholder="time"
+            type="time"
+          />
+        </div>
+        <div className="form-control w-full">
+          <label>
+            <span>Date</span>
+          </label>
+          <input
+            {...register("date")}
+            className="input rounded-lg w-full h-10 p-2 mt-4 mb-2"
+            placeholder="date"
+            type="date"
+          />
+        </div>
+        <div className="form-control w-full">
+          <label>
+            <span>Rent</span>
+          </label>
+          <input
+            {...register("rent")}
+            className="input rounded-lg w-full h-10 p-2 mt-4 mb-2"
+            placeholder="Rent"
+            value={rent}
           />
         </div>
         <div className="form-control w-full">
