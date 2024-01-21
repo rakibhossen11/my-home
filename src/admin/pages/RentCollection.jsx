@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const RentCollection = () => {
+  const [payments, setPayments] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/payments")
+      .then((res) => res.json())
+      .then((data) => setPayments(data));
+  }, []);
+
   return (
     <div className="px-12 rounded-lg w-full">
-       <Link to='/dashboard/rent'>Rent Add</Link>
+      <Link to="/dashboard/rent">Rent Add</Link>
       <table className="w-full rounded-lg mt-10">
         <thead className="text-gray-700 font-display uppercase text-lg text-left">
           <tr className="bg-dark-purple text-white origin-left font-display text-xl ">
@@ -15,12 +23,14 @@ const RentCollection = () => {
           </tr>
         </thead>
         <tbody className="text-[#000000] font-regular uppercase text-lg text-left">
-          <tr>
-            <th className="px-6 py-3">Aminul</th>
-            <th className="px-6 py-3">Octobor 23</th>
-            <th className="px-6 py-3">3000</th>
-            <th className="px-6 py-3">Paid</th>
-          </tr>
+          {payments.map((payment) => (
+            <tr className="border-b-2 border-[#000000]" key={payment._id}>
+              <th className="px-6 py-3">{payment.name}</th>
+              <th className="px-6 py-3">January</th>
+              <th className="px-6 py-3">{payment.amount}</th>
+              <th className="px-6 py-3">PAid</th>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

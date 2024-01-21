@@ -74,6 +74,16 @@ const AddClient = () => {
           placeholder="Advance"
         />
       </div>
+      <div className="form-control w-full">
+        <label>
+          <span>Transection</span>
+        </label>
+        <input
+          {...register("transection")}
+          className="input rounded-lg w-full h-10 p-2 mt-4 mb-2"
+          placeholder="transection"
+        />
+      </div>
       <input
         className="w-full font-display text-2xl bg-[#6495ED] rounded-lg text-white py-3 mt-10"
         type="submit"

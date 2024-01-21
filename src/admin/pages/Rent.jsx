@@ -11,9 +11,13 @@ const Rent = () => {
   console.log(user);
   const onSubmit = (data) => {
     console.log(data);
-    const inputArray = [];
-    inputArray.push(data);
-    console.log(inputArray);
+    fetch(`http://localhost:5000/payments`,{
+      method: "POST",
+      headers: {
+        "content-type" : "application/json"
+      },
+      body: JSON.stringify(data)
+    })
   };
 
   return (
@@ -35,13 +39,24 @@ const Rent = () => {
         </div>
         <div className="form-control w-full">
           <label>
-            <span>Code</span>
+            <span>Customer Code</span>
           </label>
           <input
             {...register("code")}
             className="input rounded-lg w-full h-10 p-2 mt-4 mb-2"
             placeholder="Code"
             value={code}
+          />
+        </div>
+        <div className="form-control w-full">
+          <label>
+            <span>Customer Id</span>
+          </label>
+          <input
+            {...register("id")}
+            className="input rounded-lg w-full h-10 p-2 mt-4 mb-2"
+            placeholder="Customer Id"
+            value={_id}
           />
         </div>
         <div className="form-control w-full">
@@ -56,6 +71,17 @@ const Rent = () => {
           />
         </div>
         <div className="form-control w-full">
+          <label>
+            <span>Month Name</span>
+          </label>
+          <input
+            {...register("month",{ required: true })}
+            className="input rounded-lg w-full h-10 p-2 mt-4 mb-2"
+            placeholder="Month Name"
+            type="month"
+          />
+        </div>
+        {/* <div className="form-control w-full">
           <label>
             <span>Month Name</span>
           </label>
@@ -87,7 +113,7 @@ const Rent = () => {
             placeholder="date"
             type="date"
           />
-        </div>
+        </div> */}
         <div className="form-control w-full">
           <label>
             <span>Rent</span>
@@ -103,7 +129,7 @@ const Rent = () => {
           <label>
             <span>Amount</span>
           </label>
-          <Input {...register("amount")} className="" placeholder="Amount" />
+          <Input {...register("amount",{ required: true })} className="" placeholder="Amount" />
         </div>
         <input
           className="w-full font-display text-2xl bg-[#6495ED] rounded-lg text-white py-3 mt-10"

@@ -1,13 +1,11 @@
-import { data } from "autoprefixer";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { AgGridReact } from 'ag-grid-react'; // React Grid Logic
-import "ag-grid-community/styles/ag-grid.css"; // Core CSS
-import "ag-grid-community/styles/ag-theme-quartz.css"; 
+import moment from 'moment';
 
 const AdminHome = () => {
   const [residents, setResidents] = useState([]);
-  console.log(residents);
+  const [currentTime, setCurrentTime] = useState(moment());
+  // console.log(currentTime);
 
   // total amount calculation
   const myNum = residents.map((resident) => parseInt(resident.rent));
@@ -21,11 +19,26 @@ const AdminHome = () => {
       .then((data) => setResidents(data));
   }, []);
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentTime(moment());
+    }, 1000); // Update every second
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+  const formattedTime = currentTime.format('MMMM Do YYYY, h:mm:ss a');
+  // console.log(formattedTime);
+
   return (
     <div className="px-12 rounded-lg w-full">
       <div className="bg-[#FFFFFF] shadow-lg p-10 rounded-lg ">
         <h1 className="font-display text-2xl ">$ {sum}</h1>
       </div>
+      <Link to='/dashboard/clientadd'>Add Customer</Link>
+      <p>Current Time: {formattedTime}</p>
       <div className="mt-10 rounded-md bg-[#FFFFFF] shadow-md">
         <table className="w-full rounded-lg">
           <thead className="text-gray-700 font-display uppercase text-lg text-left rounded-lg">
