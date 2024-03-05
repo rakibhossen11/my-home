@@ -5,7 +5,7 @@ const Cost = () => {
     const [costs,setCosts] = useState([]);
 
     useEffect(() =>{
-        fetch("http://localhost:5000/costs")
+        fetch("https://myhome-server.vercel.app/costs")
         .then((res) => res.json())
         .then((data) => setCosts(data))
     },[])

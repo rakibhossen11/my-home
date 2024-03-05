@@ -14,7 +14,7 @@ const AdminHome = () => {
   }, 0);
 
   useEffect(() => {
-    fetch("http://localhost:5000/clients")
+    fetch("https://myhome-server.vercel.app/clients")
       .then((res) => res.json())
       .then((data) => setResidents(data));
   }, []);

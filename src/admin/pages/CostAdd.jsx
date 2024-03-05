@@ -9,7 +9,7 @@ const CostAdd = () => {
 
     const onSubmit = (costs) =>{
         console.log(costs)
-        fetch("http://localhost:5000/costs",{
+        fetch("https://myhome-server.vercel.app/costs",{
             method: "POST",
             headers: {
                 "content-type" : "application/json"

@@ -50,12 +50,12 @@ const routes = createBrowserRouter([
             {
                 path: 'updateForm/:id',
                 element: <UpdateForm></UpdateForm>,
-                loader: ({params}) => fetch(`http://localhost:5000/clients/${params.id}`)
+                loader: ({params}) => fetch(`https://myhome-server.vercel.app/clients/${params.id}`)
             },
             {
                 path: 'rent/:id',
                 element: <Rent></Rent>,
-                loader: ({params}) => fetch(`http://localhost:5000/clients/${params.id}`)
+                loader: ({params}) => fetch(`https://myhome-server.vercel.app/clients/${params.id}`)
             },
             {
                 path: 'clientadd',
@@ -64,7 +64,7 @@ const routes = createBrowserRouter([
             {
                 path: 'clientdetails/:id',
                 element: <ClientDetails></ClientDetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/clients/${params.id}`)
+                loader: ({params}) => fetch(`https://myhome-server.vercel.app/clients/${params.id}`)
             },
         ]
     }

@@ -5,7 +5,7 @@ const RentCollection = () => {
   const [payments, setPayments] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/payments")
+    fetch("https://myhome-server.vercel.app/payments")
       .then((res) => res.json())
       .then((data) => setPayments(data));
   }, []);

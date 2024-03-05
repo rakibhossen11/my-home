@@ -12,7 +12,7 @@ const UpdateForm = () => {
   const onSubmit = (data) => {
     console.log(data);
     // update data from client side
-    fetch(`http://localhost:5000/clients/${_id}`, {
+    fetch(`https://myhome-server.vercel.app/clients/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

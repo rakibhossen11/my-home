@@ -7,7 +7,7 @@ const AddClient = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (clients) => {
     console.log("clients", clients);
-    fetch("http://localhost:5000/clients", {
+    fetch("https://myhome-server.vercel.app/clients", {
       method: "POST",
       headers: {
         "content-type": "application/json",
